@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+</head>
+<body>
+<h1>Hello,world!{{names}}</h1>
+{% for name in names%}
+<li>{{name}}</li>
+{% endfor %}
+<p>判断pc是否存在</p>
+{% if "pc" in names %}
+<p>存在</p>
+{% else %}
+<p>不存在</p>
+{% endif %}
+
+{% if names|length > 3 %}
+<span>所有课程>3</span>
+{% elif names|length == 3 %}
+<span>所有课程=3</span>
+{% else %}
+<span>假的 {{ names|length }} </span>
+{% endif %}
+
+</body>
+</html>
